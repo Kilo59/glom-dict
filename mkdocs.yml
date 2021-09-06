@@ -1,0 +1,52 @@
+site_name: "glom_dict"
+site_description: "Custom Dictionary with glom get and set methods"
+site_url: "https://Kilo59.github.io/glom-dict"
+repo_url: "https://github.com/Kilo59/glom-dict"
+repo_name: "glom-dict"
+site_dir: "site"
+
+nav:
+- Home:
+  - Overview: index.md
+  - Changelog: changelog.md
+  - Credits: credits.md
+  - License: license.md
+# - Code Reference:
+#   - cli.py: reference/cli.md
+- Development:
+  - Contributing: contributing.md
+  - Coverage report: coverage.md
+
+theme:
+  name: material
+  features:
+  - navigation.tabs
+  palette:
+    scheme: slate
+    primary: teal
+    accent: purple
+
+extra_css:
+- css/mkdocstrings.css
+
+markdown_extensions:
+- admonition
+- pymdownx.emoji
+- pymdownx.magiclink
+- pymdownx.snippets:
+    check_paths: true
+- pymdownx.superfences
+- pymdownx.tabbed
+- pymdownx.tasklist
+- toc:
+    permalink: "¤"
+
+plugins:
+- search
+- coverage:
+    html_report_dir: build/coverage
+- mkdocstrings:
+    watch:
+    - src/glom_dict
+- macros:
+    module_name: docs/macros
