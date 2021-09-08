@@ -32,7 +32,7 @@ python -m pip install glom-dict
 ### Better error messages.
 
 ```python
->>> d = GlomDict(**{'a': {'b': None}})
+>>> d = GlomDict({'a': {'b': None}})
 >>> d["a.b.c"]
 Traceback (most recent call last):
 ...
