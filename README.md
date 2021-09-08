@@ -24,8 +24,8 @@ python -m pip install glom-dict
 >>> d["my_dict.a.b"]
  'c'
 
->>> d["my_dict.a.b] = "C"
->>> d["my_dict.a.b]
+>>> d["my_dict.a.b"] = "C"
+>>> d["my_dict.a.b"]
  'C'
 ```
 
