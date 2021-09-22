@@ -1,6 +1,6 @@
 # glom-dict
 
-[![ci](https://github.com/glom_dict/glom-dict/workflows/ci/badge.svg)](https://github.com/glom_dict/glom-dict/actions?query=workflow%3Aci)
+[![ci](https://github.com/Kilo59/glom-dict/workflows/ci/badge.svg)](https://github.com/Kilo59/glom-dict/actions)
 [![documentation](https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat)](https://glom_dict.github.io/glom-dict/)
 [![pypi version](https://img.shields.io/pypi/v/glom-dict.svg)](https://pypi.org/project/glom-dict/)
 
