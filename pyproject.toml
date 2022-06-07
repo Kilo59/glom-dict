@@ -15,7 +15,7 @@ keywords = ["glom", "dict", "nested"]
 packages = [ { include = "glom_dict", from = "src" } ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.6.2"
 glom = "^20.11.0"
 
 [tool.poetry.dev-dependencies]
