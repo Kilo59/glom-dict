@@ -164,7 +164,7 @@ def check_code_quality(ctx):
         files: The files to check.
     """
     ctx.run(
-        "prospector .",
+        "prospector . --no-autodetect",
         title="Checking code quality",
         pty=PTY,
     )
@@ -217,7 +217,7 @@ def check_types(ctx):
         ctx: The context instance (passed automatically).
     """
     ctx.run(
-        f"mypy --config-file config/mypy.ini {PY_SRC}", title="Type-checking", pty=PTY
+        f"mypy {PY_SRC}", title="Type-checking", pty=PTY
     )
 
 
@@ -344,7 +344,7 @@ def test(ctx, match: str = ""):
     py_version = f"{sys.version_info.major}{sys.version_info.minor}"
     os.environ["COVERAGE_FILE"] = f".coverage-{py_version}"
     ctx.run(
-        ["pytest", "-c", "config/pytest.ini", "-n", "auto", "-k", match, "tests"],
+        ["pytest", "-k", match, "tests"],
         title="Running tests",
         pty=PTY,
     )

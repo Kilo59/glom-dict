@@ -24,15 +24,15 @@ python -m pip install glom-dict
 >>> d["my_dict.a.b"]
  'c'
 
->>> d["my_dict.a.b] = "C"
->>> d["my_dict.a.b]
+>>> d["my_dict.a.b"] = "C"
+>>> d["my_dict.a.b"]
  'C'
 ```
 
 ### Better error messages.
 
 ```python
->>> d = GlomDict(**{'a': {'b': None}})
+>>> d = GlomDict({'a': {'b': None}})
 >>> d["a.b.c"]
 Traceback (most recent call last):
 ...
@@ -43,8 +43,9 @@ PathAccessError: could not access 'c', index 2 in path Path('a', 'b', 'c'), got 
 
 ```python
 from glom_dict import GlomDict, Path
->>> d = GlomDict({"a": {"b": ["works", "with", "lists", "too"]}})
->>> d[Path("a", "b", 0)]
+>>> my_path = Path("a", "b", 1)
+>>> d = GlomDict({"a": {"b": ["it", "works", "with", "lists", "too"]}})
+>>> d[my_path]
 'works'
 ```
 
