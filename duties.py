@@ -164,7 +164,7 @@ def check_code_quality(ctx):
         files: The files to check.
     """
     ctx.run(
-        "prospector .",
+        "prospector . --no-autodetect",
         title="Checking code quality",
         pty=PTY,
     )
