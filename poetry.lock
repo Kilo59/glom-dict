@@ -148,14 +148,14 @@ python-versions = "*"
 
 [[package]]
 name = "duty"
-version = "0.6.0"
+version = "0.7.0"
 description = "A simple task runner."
 category = "dev"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = ">=3.6"
 
 [package.dependencies]
-failprint = ">=0.6.2,<0.7.0"
+failprint = ">=0.8,<1.0"
 
 [[package]]
 name = "face"
@@ -170,16 +170,16 @@ boltons = ">=20.0.0"
 
 [[package]]
 name = "failprint"
-version = "0.6.2"
+version = "0.8.0"
 description = "Run a command, print its output only if it fails."
 category = "dev"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = ">=3.6"
 
 [package.dependencies]
-ansimarkup = ">=1.4.0,<2.0.0"
-jinja2 = ">=2.11.2,<3.0.0"
-ptyprocess = {version = ">=0.6.0,<0.7.0", markers = "sys_platform != \"win32\""}
+ansimarkup = ">=1.4,<2.0"
+jinja2 = ">=2.11,<4"
+ptyprocess = {version = ">=0.6,<1.0", markers = "sys_platform != \"win32\""}
 
 [[package]]
 name = "flake8"
@@ -645,7 +645,7 @@ with_vulture = ["vulture (>=1.5)"]
 
 [[package]]
 name = "ptyprocess"
-version = "0.6.0"
+version = "0.7.0"
 description = "Run a subprocess in a pseudo terminal"
 category = "dev"
 optional = false
@@ -1034,7 +1034,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "9af3da6961177b5bccf03969bd3bec37a203a1051094d1b30458c1d9c32a7bf9"
+content-hash = "299206660d507ca5a30acb1e344698f864d2dc2e88ea5c6c4dcfa7e9cbe59204"
 
 [metadata.files]
 ansimarkup = [
@@ -1150,16 +1150,16 @@ dodgy = [
     {file = "dodgy-0.2.1.tar.gz", hash = "sha256:28323cbfc9352139fdd3d316fa17f325cc0e9ac74438cbba51d70f9b48f86c3a"},
 ]
 duty = [
-    {file = "duty-0.6.0-py3-none-any.whl", hash = "sha256:7757f4ce0875934341baea53b324a76150dddd7f95b82dda88b1fe0e84d78e38"},
-    {file = "duty-0.6.0.tar.gz", hash = "sha256:551baa40460c0af976b6b8ff34fc389623a55053a2ffbed3dac13b1b3196714b"},
+    {file = "duty-0.7.0-py3-none-any.whl", hash = "sha256:45068baf1639f16464aa40e9d8f698f0ae09408368fe53a34e9bfe6993dfd743"},
+    {file = "duty-0.7.0.tar.gz", hash = "sha256:5ebfd4640ab41e3058f1d8433f74228d60c9a808def1784e65319ef1899a9d15"},
 ]
 face = [
     {file = "face-20.1.1-py2-none-any.whl", hash = "sha256:3790311a7329e4b0d90baee346eecad54b337629576edf3a246683a5f0d24446"},
     {file = "face-20.1.1.tar.gz", hash = "sha256:7d59ca5ba341316e58cf72c6aff85cca2541cf5056c4af45cb63af9a814bed3e"},
 ]
 failprint = [
-    {file = "failprint-0.6.2-py3-none-any.whl", hash = "sha256:93dee89bdde24b884a325d83cb399c7a9ef18553f15152124866248f50856d9a"},
-    {file = "failprint-0.6.2.tar.gz", hash = "sha256:0ab080d43bb63cfa0f9f02402206176c9fba8c3484b83fc7992fdabfbb96f388"},
+    {file = "failprint-0.8.0-py3-none-any.whl", hash = "sha256:a8215a7aca5ce687116b995cd3a9667180f222ab88c4328a5007d2fa0b5c0f78"},
+    {file = "failprint-0.8.0.tar.gz", hash = "sha256:4633b52f9395bf042ad996c96cd7819a94b2021833030dd1eb692ebbd86b89a1"},
 ]
 flake8 = [
     {file = "flake8-4.0.1-py2.py3-none-any.whl", hash = "sha256:479b1304f72536a55948cb40a32dce8bb0ffe3501e26eaf292c7e60eb5e0428d"},
@@ -1399,8 +1399,8 @@ prospector = [
     {file = "prospector-1.7.7.tar.gz", hash = "sha256:c04b3d593e7c525cf9a742fed62afbe02e2874f0e42f2f56a49378fd94037360"},
 ]
 ptyprocess = [
-    {file = "ptyprocess-0.6.0-py2.py3-none-any.whl", hash = "sha256:d7cc528d76e76342423ca640335bd3633420dc1366f258cb31d05e865ef5ca1f"},
-    {file = "ptyprocess-0.6.0.tar.gz", hash = "sha256:923f299cc5ad920c68f2bc0bc98b75b9f838b93b599941a6b63ddbc2476394c0"},
+    {file = "ptyprocess-0.7.0-py2.py3-none-any.whl", hash = "sha256:4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35"},
+    {file = "ptyprocess-0.7.0.tar.gz", hash = "sha256:5c5d0a3b48ceee0b48485e0c26037c0acd7d29765ca3fbb5cb3831d347423220"},
 ]
 py = [
     {file = "py-1.11.0-py2.py3-none-any.whl", hash = "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"},
