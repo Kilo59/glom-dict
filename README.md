@@ -1,12 +1,10 @@
 # glom-dict
 
 [![ci](https://github.com/Kilo59/glom-dict/workflows/ci/badge.svg)](https://github.com/Kilo59/glom-dict/actions)
-[![documentation](https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat)](https://glom_dict.github.io/glom-dict/)
+[![documentation](https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat)](https://kilo59.github.io/glom-dict/)
 [![pypi version](https://img.shields.io/pypi/v/glom-dict.svg)](https://pypi.org/project/glom-dict/)
 
-Custom Dictionary with glom path compatible get, set and delete methods.
-
-https://glom.readthedocs.io/en/latest/
+Custom Dictionary with [glom](https://glom.readthedocs.io/en/latest/) path compatible get, set and delete methods.
 
 For easy access to and operations on nested data.
 

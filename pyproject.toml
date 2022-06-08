@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "glom-dict"
-version = "0.0.1a"
+version = "0.0.1a1"
 description = "Custom Dictionary with glom get, set and del methods"
 authors = ["Gabriel <gabriel59kg@gmail.com>"]
 license = "MIT License"
