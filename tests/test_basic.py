@@ -1,5 +1,6 @@
 """Tests for the `cli` module."""
 import collections
+from pprint import pformat as pf
 
 import glom as g
 import pytest
@@ -81,6 +82,36 @@ class TestSetItem:
         str_path = ".".join(str(p) for p in path.values())
         gd[str_path] = value
         assert gd[str_path] == value
+
+
+class TestAssign:
+    @pytest.mark.parametrize(
+        "path, value",
+        [
+            (g.Path("a", "b", "c"), "D"),
+            (g.Path("a_list", 2), "ANOTHER_NEEDLE"),
+        ],
+    )
+    def test_simple_assignment(self, sample, path: g.Path, value):
+        gd = GlomDict(**sample)
+
+        glom_path = g.Path(*path)
+        gd.assign(glom_path, value)
+        assert gd[glom_path] == value
+
+    @pytest.mark.parametrize(
+        "path, value, missing",
+        [
+            (g.Path("a", "KEY", "THAT", "DOES NOT"), "EXIST", dict),
+            (g.Path("NEEDS", "BACKFILL"), {"foo": "bar"}, dict),
+        ],
+    )
+    def test_assignment_backfill(self, sample, path: g.Path, value, missing):
+        gd = GlomDict(**sample)
+
+        gd.assign(path, value, missing=missing)
+        print(pf(gd, depth=2))
+        assert gd[path] == value
 
 
 @pytest.mark.parametrize(
