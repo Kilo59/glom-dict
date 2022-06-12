@@ -1,6 +1,6 @@
 import collections
 import logging
-from typing import Any, Hashable, Union
+from typing import Any, Callable, Hashable, Union, Optional
 
 import glom as g
 
@@ -26,6 +26,7 @@ class GlomDict(collections.UserDict, dict):
       __getitem__
       __setitem__
       __delitem__
+      assign
     """
 
     def __getitem__(self, key: GlomDictKey):
@@ -36,3 +37,10 @@ class GlomDict(collections.UserDict, dict):
 
     def __delitem__(self, key: GlomDictKey):
         g.delete(self, key)
+
+    def assign(self, path: GlomDictKey, val: Any, missing: Optional[Callable] = None):
+        return g.assign(self.data, path, val=val, missing=missing)
+
+
+# use the glom assign docs function docs
+GlomDict.assign.__doc__ = g.assign.__doc__
