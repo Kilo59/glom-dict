@@ -62,4 +62,5 @@ Implemented methods
 - [x] `__getitem__` - `glom.glom()`
 - [x] `__setitem__` - `glom.assign()`
 - [x] `__delitem__` - `glom.delete()`
+- [x] `assign` - `glom.assign()` - can pass `missing` callable to automatically backfill missing structures.
 - [ ] `update` - Works but no special behavior
