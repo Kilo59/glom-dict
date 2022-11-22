@@ -216,9 +216,7 @@ def check_types(ctx):
     Arguments:
         ctx: The context instance (passed automatically).
     """
-    ctx.run(
-        f"mypy {PY_SRC}", title="Type-checking", pty=PTY
-    )
+    ctx.run(f"mypy {PY_SRC}", title="Type-checking", pty=PTY)
 
 
 @duty(silent=True)
