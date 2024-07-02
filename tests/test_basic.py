@@ -1,4 +1,5 @@
 """Tests for the `cli` module."""
+
 import collections
 from pprint import pformat as pf
 
